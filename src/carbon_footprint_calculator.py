@@ -119,6 +119,12 @@ class CarbonFootprintCalculator:
         Args:
             save_path (str, optional): Path to save the figure. If None, the figure is displayed.
         """
+        folder_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "results")
+        os.makedirs(folder_path, exist_ok=True)
+
+        filename = "food_comparison.png"  
+        save_path = os.path.join(folder_path, filename)
+
         plt.figure(figsize=(12, 15))
         
         sns.set_style("whitegrid")
@@ -148,6 +154,11 @@ class CarbonFootprintCalculator:
             items (list): List of (food_item, quantity) tuples
             save_path (str, optional): Path to save the figure. If None, the figure is displayed.
         """
+        folder_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "results")
+        os.makedirs(folder_path, exist_ok=True)
+
+        filename = f"breakdown_{meal_name}.png"
+        save_path = os.path.join(folder_path, filename)
        
         total_cfp, breakdown = self.calculate_footprint(items)
         
@@ -337,7 +348,7 @@ def main():
     calculator = CarbonFootprintCalculator(args.data)
     
     if args.visualize_only:
-        calculator.plot_food_comparison('food_carbon_footprint_comparison.png')
+        calculator.plot_food_comparison(None)
         sys.exit(0)
    
     meal_name, items = calculator.interactive_meal_input()

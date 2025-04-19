@@ -103,7 +103,7 @@ data/*.xlsx
 !data/Food_Production.csv
 
 # Large media files
-*.png
+#*.png
 *.jpg
 *.jpeg
 *.gif
