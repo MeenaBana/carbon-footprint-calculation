@@ -4,7 +4,7 @@ Calculate and visualize the carbon footprint of meals based on food items and th
 
 This work was completed as part of the course "Python Programming for Calculations" at the University of South-Eastern Norway.
 
-![Food Carbon Footprint Comparison](https://raw.githubusercontent.com/username/carbon-footprint-calculation/main/images/food_carbon_footprint_comparison.png)
+![Food Carbon Footprint Comparison](results/food_comparison.png)
 
 ## 📋 Table of Contents
 
